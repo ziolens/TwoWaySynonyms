@@ -1,0 +1,17 @@
+<form [formGroup]="form" class="form" (ngSubmit)="add()">
+    <mat-form-field >
+        <span>Term</span>
+        <input type="text" matInput formControlName="term" class="form-field">
+    </mat-form-field>
+    <mat-form-field>
+        <span>Synonyms</span>
+        <input type="text" matInput formControlName="synonyms" class="form-field">
+    </mat-form-field>
+    <button type="submit" class="submit-button">Add</button>  
+</form>
+<mat-list *ngFor="let termAndSynonyms of termsAndSynonyms">
+    <mat-list-item class="term">{{ termAndSynonyms.term }}</mat-list-item>
+    <mat-list-item *ngFor="let synonym of termAndSynonyms.synonyms">
+        {{ synonym }}
+    </mat-list-item>
+</mat-list>

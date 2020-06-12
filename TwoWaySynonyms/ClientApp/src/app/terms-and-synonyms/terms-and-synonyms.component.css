@@ -1,0 +1,16 @@
+.term {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.form {
+    margin: 10px;
+}
+
+.form-field {
+    border: 1px solid #000000 !important;
+}
+
+.submit-button {
+    display: block;
+}
