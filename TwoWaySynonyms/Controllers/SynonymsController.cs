@@ -24,7 +24,7 @@ namespace TwoWaySynonyms.Controllers
         [Route("add-new")]
         public ActionResult AddNewTermWithSynonyms([FromBody] TermWithSynonymsInput termWithSynonyms)
         {
-            var result = _termsAndSynonymsRepository.AddNewTermWithSynonyms(termWithSynonyms.Term, termWithSynonyms.Synonyms);
+            var result = _termsAndSynonymsRepository.AddNewTermWithSynonyms(termWithSynonyms);
             if (result)
             {
                 return Ok();

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DataAccess.Dtos;
+using DataAccess.Mappers;
 using Models;
 
 namespace DataAccess.Repositories
@@ -14,11 +16,11 @@ namespace DataAccess.Repositories
             _applicationDbContextFactory = applicationDbContextFactory;
         }
 
-        public bool AddNewTermWithSynonyms(string term, string synonyms)
+        public bool AddNewTermWithSynonyms(TermWithSynonymsInput termWithSynonymsInput)
         {
             try
             {
-                var termWithSynonyms = new TermWithSynonyms(term, synonyms);
+                var termWithSynonyms = SynonymsMapper.Map(termWithSynonymsInput);
                 using (var applicationDbContext = _applicationDbContextFactory())
                 {
                     applicationDbContext.Add(termWithSynonyms);

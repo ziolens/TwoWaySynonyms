@@ -32,5 +32,10 @@ namespace DataAccess.Mappers
 
             return sortedSynonyms.ToListOfWords();
         }
+
+        public static TermWithSynonyms Map(TermWithSynonymsInput termWithSynonymsInput)
+        {
+            return new TermWithSynonyms(termWithSynonymsInput.Term, termWithSynonymsInput.Synonyms);
+        }
     }
 }
