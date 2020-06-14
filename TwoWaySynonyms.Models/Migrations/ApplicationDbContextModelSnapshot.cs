@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Models;
+using TwoWaySynonyms.Models;
 
-namespace Models.Migrations
+namespace TwoWaySynonyms.Models.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -18,7 +18,7 @@ namespace Models.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Models.TermWithSynonyms", b =>
+            modelBuilder.Entity("TwoWaySynonyms.Models.TermWithSynonyms", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

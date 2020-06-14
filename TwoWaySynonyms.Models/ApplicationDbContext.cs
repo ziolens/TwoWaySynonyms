@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Models
+namespace TwoWaySynonyms.Models
 {
     public class ApplicationDbContext : DbContext
     {

@@ -1,4 +1,4 @@
-﻿namespace DataAccess.Dtos
+﻿namespace TwoWaySynonyms.DataAccess.Dtos
 {
     public class TermWithSynonymsInput
     {

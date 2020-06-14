@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Models.Migrations
+namespace TwoWaySynonyms.Models.Migrations
 {
     public partial class InitialMigration : Migration
     {

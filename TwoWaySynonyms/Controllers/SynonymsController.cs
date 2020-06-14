@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using DataAccess.Dtos;
-using DataAccess.Mappers;
-using DataAccess.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Models;
+using TwoWaySynonyms.DataAccess.Dtos;
+using TwoWaySynonyms.DataAccess.Repositories;
 
 namespace TwoWaySynonyms.Controllers
 {
@@ -43,7 +41,7 @@ namespace TwoWaySynonyms.Controllers
                 return NoContent();
             }
 
-            return Ok(SynonymsMapper.Map(termsWithSynonyms));
+            return Ok(termsWithSynonyms);
         }
     }
 }

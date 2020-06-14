@@ -1,15 +1,13 @@
-using DataAccess.Mappers;
-using DataAccess.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Models;
 using System;
 using Microsoft.EntityFrameworkCore;
+using TwoWaySynonyms.DataAccess.Mappers;
+using TwoWaySynonyms.DataAccess.Repositories;
+using TwoWaySynonyms.Models;
 
 namespace TwoWaySynonyms
 {
@@ -40,6 +38,7 @@ namespace TwoWaySynonyms
                         errorNumbersToAdd: null)), ServiceLifetime.Transient);
             services.AddScoped<Func<ApplicationDbContext>>(serviceProvider => serviceProvider.GetRequiredService<ApplicationDbContext>);
             services.AddTransient<ITermsAndSynonymsRepository, TermsAndSynonymsRepository>();
+            services.AddTransient<ISynonymsMapper, SynonymsMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
-using DataAccess.Dtos;
-using Models;
+using TwoWaySynonyms.DataAccess.Dtos;
 
-namespace DataAccess.Repositories
+namespace TwoWaySynonyms.DataAccess.Repositories
 {
     public interface ITermsAndSynonymsRepository
     {
         bool AddNewTermWithSynonyms(TermWithSynonymsInput termWithSynonymsInput);
 
-        IList<TermWithSynonyms> GetTermsWithSynonyms();
+        IEnumerable<Words> GetTermsWithSynonyms();
     }
 }

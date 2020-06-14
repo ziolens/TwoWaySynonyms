@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DataAccess.Dtos
+namespace TwoWaySynonyms.DataAccess.Dtos
 {
     public class Words
     {
